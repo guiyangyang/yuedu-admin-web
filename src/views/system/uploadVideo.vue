@@ -28,7 +28,7 @@
                         prop="type">
             <el-select v-model="uploadForm.type"
                        placeholder="请选择">
-              <el-option v-for="item in labelOptions"
+              <el-option v-for="item in typeOptions"
                          :key="item.value"
                          :label="item.label"
                          :value="item.value">
@@ -134,6 +134,48 @@ import myUpload from "vue-image-crop-upload";
 export default {
   data () {
     return {
+      typeOptions: [
+        {
+          value: 'HTML/CSS',
+          label: 'HTML/CSS'
+        },
+        {
+          value: 'JavaScript',
+          label: 'JavaScript'
+        },
+        {
+          value: 'jQuery',
+          label: 'jQuery'
+        },
+        {
+          value: 'Vue',
+          label: 'Vue'
+        },
+        {
+          value: 'Node',
+          label: 'Node'
+        },
+        {
+          value: 'FontOther',
+          label: 'FontOther'
+        },
+        {
+          value: 'Java',
+          label: 'Java'
+        },
+        {
+          value: 'PHP',
+          label: 'PHP'
+        },
+        {
+          value: 'Python',
+          label: 'Python'
+        },
+        {
+          value: 'EndOther',
+          label: 'EndOther'
+        },
+      ],
       labelOptions: [
         {
           value: 'HTML/CSS',
@@ -156,8 +198,44 @@ export default {
           label: 'Node'
         },
         {
-          value: 'FontTool',
-          label: 'FontTool'
+          value: 'MUI',
+          label: 'MUI'
+        },
+        {
+          value: 'Angular',
+          label: 'Angular'
+        },
+        {
+          value: 'Bootstrap',
+          label: 'Bootstrap'
+        },
+        {
+          value: 'WeiChat',
+          label: 'WeiChat'
+        },
+        {
+          value: 'Gulp',
+          label: 'Gulp'
+        },
+        {
+          value: 'Webpack',
+          label: 'Webpack'
+        },
+        {
+          value: 'MongoDb',
+          label: 'MongoDb'
+        },
+        {
+          value: 'Mysql',
+          label: 'Mysql'
+        },
+        {
+          value: 'Redis',
+          label: 'Redis'
+        },
+        {
+          value: 'FontOther',
+          label: 'FontOther'
         },
         {
           value: 'Java',
@@ -170,6 +248,10 @@ export default {
         {
           value: 'Python',
           label: 'Python'
+        },
+        {
+          value: 'EndOther',
+          label: 'EndOther'
         },
       ],
       uploadForm: {

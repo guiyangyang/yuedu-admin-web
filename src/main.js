@@ -13,6 +13,7 @@ import store from './store'
 import router from './router'
 
 import '@/icons' // icon
+import '@/assets/fonts/iconfont.js'  // my icon
 import '@/permission' // permission control
 
 import VerifyCode from './components/VerifyCode/index';

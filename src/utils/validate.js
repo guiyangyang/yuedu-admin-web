@@ -20,11 +20,11 @@ export function valiteText_r (rule, value, callback) {
 
 }
 export function valiteNum_r (rule, value, callback) {
-  let numReg = /^[0-9]$/g;
+  let numReg = /^\d+\.?\d{0,2}$/;
   if (!value) {
     callback(new Error('不能为空'));
   } else if (!numReg.test(value)) {
-    callback(new Error('请输入数字'));
+    callback(new Error('请输入正确价格(123.00)'));
   } else {
     callback();
   }

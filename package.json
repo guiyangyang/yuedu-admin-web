@@ -20,8 +20,11 @@
     "mockjs": "1.0.1-beta3",
     "normalize.css": "7.0.0",
     "nprogress": "0.2.0",
+    "text-roll": "^1.0.3",
     "vue": "2.5.17",
+    "vue-aplayer": "^1.6.1",
     "vue-image-crop-upload": "^2.5.0",
+    "vue-music-component": "^1.1.7",
     "vue-router": "3.0.1",
     "vuex": "3.0.1"
   },

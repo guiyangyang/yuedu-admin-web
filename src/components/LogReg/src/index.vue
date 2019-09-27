@@ -66,7 +66,7 @@
                      type="text"
                      maxlength="11"
                      autocomplete="off"
-                     placeholder="请输入正确的手机号"
+                     placeholder="请输入正确的手机号(暂不支持)"
                      class="ipt"
                      @blur="verifyCodePhone(loginByPhoneCode.phone)">
               <div class="tip-text">{{codePhoneText}}</div>
@@ -76,7 +76,7 @@
                      :type="pwdType"
                      maxlength="4"
                      autocomplete="off"
-                     placeholder="请输入短信验证码"
+                     placeholder="请输入短信验证码(暂不支持)"
                      class="ipt">
               <div class='send-code-text active'
                    @click.self="sendCode"

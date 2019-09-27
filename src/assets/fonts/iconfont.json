@@ -1,0 +1,51 @@
+{
+  "id": "",
+  "name": "",
+  "font_family": "iconfont",
+  "css_prefix_text": "icon-",
+  "description": "",
+  "glyphs": [
+    {
+      "icon_id": "2486195",
+      "name": "music-on",
+      "font_class": "music-on-copy",
+      "unicode": "e50c",
+      "unicode_decimal": 58636
+    },
+    {
+      "icon_id": "2486196",
+      "name": "music off",
+      "font_class": "music-off-copy",
+      "unicode": "e50d",
+      "unicode_decimal": 58637
+    },
+    {
+      "icon_id": "3925599",
+      "name": "pause",
+      "font_class": "music-icon_pause",
+      "unicode": "e633",
+      "unicode_decimal": 58931
+    },
+    {
+      "icon_id": "6343302",
+      "name": "music_pre",
+      "font_class": "music_pre",
+      "unicode": "e60f",
+      "unicode_decimal": 58895
+    },
+    {
+      "icon_id": "6343303",
+      "name": "music_next",
+      "font_class": "music_next",
+      "unicode": "e610",
+      "unicode_decimal": 58896
+    },
+    {
+      "icon_id": "8708360",
+      "name": "next",
+      "font_class": "next",
+      "unicode": "ea35",
+      "unicode_decimal": 59957
+    }
+  ]
+}

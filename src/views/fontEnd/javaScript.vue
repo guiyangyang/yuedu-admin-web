@@ -37,7 +37,8 @@
       </el-row>
     </div>
 
-    <div class="pagination-box">
+    <div class="pagination-box"
+         v-if="total>params.pageSize">
       <el-pagination @current-change="handleCurrentChange"
                      :current-page="params.pageNum"
                      :page-size="params.pageSize"
@@ -48,10 +49,13 @@
     </div>
 
     <el-dialog :title="dialogVideoTitle"
-               top='40vh'
+               top='20vh'
                :visible.sync="dialogVideoSee"
                class="dialog-see-video">
-      <div class="link-box">地址：<a href="http://www.baidu.com"
+      <img class="zan-shang-img"
+           src="@/assets/images/zanshang.png"
+           alt="">
+      <div class="link-box">地址：<a :href="seeLinkText"
            target="_blank"
            rel="noopener noreferrer">{{seeLinkText}}</a></div>
       <div class="pwd-box">密码：{{seePwdText}}</div>
@@ -63,7 +67,6 @@
   </div>
 </template>
 <script>
-import imgUrl from './../../assets/images/1.png';
 import { getVideos, getVideoInfos } from '@/api/videos';
 
 export default {
@@ -78,7 +81,7 @@ export default {
       total: 1,
       params: {
         type: 'JavaScript',
-        pageSize: 12,
+        pageSize: 24,
         pageNum: 1
       },
     }

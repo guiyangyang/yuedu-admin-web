@@ -69,6 +69,16 @@ a:hover {
 }
 
 //main-container全局样式
+.icon {
+  width: 1em;
+  height: 1em;
+  vertical-align: -0.15em;
+  fill: currentColor;
+  overflow: hidden;
+  -webkit-transition: font-size 0.25s linear, width 0.25s linear;
+  -moz-transition: font-size 0.25s linear, width 0.25s linear;
+  transition: font-size 0.25s linear, width 0.25s linear;
+}
 .app-main {
   min-height: 100%;
   background-color: $bgColor;
@@ -249,6 +259,7 @@ a:hover {
 
   .el-dialog__body {
     font-size: 16px;
+    padding: 0px 20px 30px;
   }
 
   .link-box {
@@ -265,5 +276,10 @@ a:hover {
 
   .pwd-box:hover {
     font-weight: 600;
+  }
+
+  .zan-shang-img {
+    display: block;
+    margin: 0 auto;
   }
 }

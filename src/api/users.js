@@ -2,7 +2,7 @@ import request from '@/utils/request';
 
 export function getUsers (params) {
   return request({
-    url: '/users',
+    url: '/apis/users',
     method: 'post',
     data: params
   })

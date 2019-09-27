@@ -69,16 +69,10 @@ export const constantRouterMap = [
         meta: { title: 'nodeJs', icon: 'tree' }
       },
       {
-        path: 'fontTool',
-        name: 'FontTool',
-        component: () => import('@/views/fontEnd/fontTool'),
-        meta: { title: 'fontTool', icon: 'tree' }
-      },
-      {
-        path: 'fontBook',
-        name: 'FontBook',
-        component: () => import('@/views/fontEnd/fontBook'),
-        meta: { title: 'fontBook', icon: 'tree' }
+        path: 'fontOther',
+        name: 'FontOther',
+        component: () => import('@/views/fontEnd/fontOther'),
+        meta: { title: 'other', icon: 'tree' }
       }
     ]
   },
@@ -106,6 +100,12 @@ export const constantRouterMap = [
         name: 'Python',
         component: () => import('@/views/backEnd/python'),
         meta: { title: 'python', icon: 'tree' }
+      },
+      {
+        path: 'endOther',
+        name: 'endOther',
+        component: () => import('@/views/backEnd/endOther'),
+        meta: { title: 'other', icon: 'tree' }
       }
     ]
   },
@@ -114,7 +114,7 @@ export const constantRouterMap = [
     component: Layout,
     redirect: '/system/userManage',
     name: 'System',
-    meta: { title: 'system', icon: 'example' },
+    meta: { title: '系统管理', icon: 'example' },
     children: [
       {
         path: 'userManage',

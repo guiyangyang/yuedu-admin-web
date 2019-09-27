@@ -2,7 +2,7 @@ import request from '@/utils/request';
 
 export function getOrders (params) {
   return request({
-    url: '/orders',
+    url: '/apis/orders',
     method: 'post',
     data: params
   })

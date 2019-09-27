@@ -12,7 +12,7 @@
                 :key="index">
           <div class="plate-box">
             <div class="cover-box">
-              <img :src="'http://localhost:8081'+item.imgSrc"
+              <img :src="item.imgSrc"
                    alt="">
               <div class="label-box"><span v-for="(label,index) in item.labels"
                       :key="index"> {{label}}
@@ -48,10 +48,13 @@
     </div> -->
 
     <el-dialog :title="dialogVideoTitle"
-               top='40vh'
+               top='20vh'
                :visible.sync="dialogVideoSee"
                class="dialog-see-video">
-      <div class="link-box">地址：<a href="http://www.baidu.com"
+      <img class="zan-shang-img"
+           src="@/assets/images/zanshang.png"
+           alt="">
+      <div class="link-box">地址：<a :href="seeLinkText"
            target="_blank"
            rel="noopener noreferrer">{{seeLinkText}}</a></div>
       <div class="pwd-box">密码：{{seePwdText}}</div>
@@ -63,7 +66,6 @@
   </div>
 </template>
 <script>
-import imgUrl from './../../assets/images/1.png';
 import { getVideos, getVideoInfos } from '@/api/videos';
 
 export default {
@@ -84,25 +86,6 @@ export default {
     }
   },
   created () {
-    let a1 = {
-      id: 1,
-      img: imgUrl,
-      title: '【白神器】N种语言实现4版本抖音告白程序',
-      price: 2,
-      labels: ['javaScript', 'Vue', 'HTML/CSS']
-    }
-
-    let a2 = {
-      id: 1,
-      img: imgUrl,
-      title: 'sass入门',
-      price: 2,
-      labels: ['javascript', 'vue']
-    }
-
-    // for (let i = 0; i < 20; i++) {
-    //   this.datas.push(a1); this.datas.push(a2)
-    // }
     this.getVideoLists()
   },
   methods: {

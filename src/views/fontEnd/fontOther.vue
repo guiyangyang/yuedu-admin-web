@@ -80,7 +80,7 @@ export default {
       datas: [],
       total: 1,
       params: {
-        type: 'HTML/CSS',
+        type: 'FontOther',
         pageSize: 24,
         pageNum: 1
       },

@@ -1,26 +1,19 @@
 <template>
   <div class="main-box">
-
     <div class="table-box">
-      <el-table :data="tableData"
-                border>
-        <el-table-column prop="username"
-                         center
-                         label="用户名">
-        </el-table-column>x
-        <el-table-column prop="phone"
-                         label="手机号">
+      <el-table :data="tableData" border>
+        <el-table-column prop="username" center label="用户名">
+        </el-table-column
+        >x
+        <el-table-column prop="phone" label="手机号"> </el-table-column>
+        <el-table-column prop="email" label="邮箱"> </el-table-column>
+        <el-table-column
+          prop="regTime"
+          :show-overflow-tooltip="true"
+          label="注册时间"
+        >
         </el-table-column>
-        <el-table-column prop="email"
-                         label="邮箱">
-        </el-table-column>
-        <el-table-column prop="regTime"
-                         :show-overflow-tooltip="true"
-                         label="注册时间">
-        </el-table-column>
-        <el-table-column prop="logTime"
-                         label="最近登录时间">
-        </el-table-column>
+        <el-table-column prop="logTime" label="最近登录时间"> </el-table-column>
         <el-table-column label="操作">
           <template slot-scope="scope">
             <span class="table-text-blue mr-16">查看</span>
@@ -30,18 +23,23 @@
     </div>
 
     <div class="pagination-box">
-      <el-pagination @current-change="handleCurrentChange"
-                     :current-page="params.pageNum"
-                     :page-size="params.pageSize"
-                     layout="prev, pager, next"
-                     background
-                     :total="total">
+      <el-pagination
+        @current-change="handleCurrentChange"
+        :current-page="params.pageNum"
+        :page-size="params.pageSize"
+        layout="prev, pager, next"
+        background
+        :total="total"
+      >
       </el-pagination>
     </div>
+    <!-- <svg-icon icon-class="example2" /> -->
   </div>
 </template>
 <script>
 import { getUsers } from '@/api/users';
+
+
 export default {
   data () {
     return {
@@ -51,25 +49,11 @@ export default {
         pageSize: 10,
         pageNum: 1
       },
-      total: 1
-
+      total: 1,
     }
   },
   created () {
-    let user = {
-      username: 'bool',
-      phone: '123',
-      email: 'qq.com',
-      logTime: '123',
-      regTime: '000'
-    }
-    let arr = []
-    for (let i = 0; i < 10; i++) {
-      arr.push(user)
-    }
-    // this.tableData = arr
     this.getUserLists()
-
   },
   methods: {
     getUserLists () {
